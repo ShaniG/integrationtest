@@ -9,17 +9,18 @@
 <!-- in the project's Project Properties dialog box.-->
 <project default="run" name="04_JUNIT_Palindroom">
     
-    <!--<target name="run" depends="compile">
+    <target name="run" depends="compile">
+        <java classname="domein.Palindroom">
+        <classpath path="staging" />
+        </java>
     </target>
     <target name="compile">
-        <javac srcdir="./src" destdir="staging" />
-    </target>-->
-   
-   
-    <description>Builds, tests, and runs the project 04_JUNIT_Palindroom.</description>
-    <import file="nbproject/build-impl.xml"/>
+        <javac includeantruntime="false" srcdir="./src" destdir="staging" />
+    </target>
    
     <!--
+    <description>Builds, tests, and runs the project 04_JUNIT_Palindroom.</description>
+    <import file="nbproject/build-impl.xml"/>
 
     There exist several targets which are by default empty and which can be 
     used for execution of your tasks. These targets are usually executed 
